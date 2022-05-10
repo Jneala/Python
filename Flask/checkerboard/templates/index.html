@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  <style>
+    .box1{
+      background-color: {{col1}};
+    }
+    .box2{
+      background-color: {{col2}};
+    }
+  </style>
+  <title>Checkerboard</title>
+</head>
+<body>
+  <table>
+    <h2>CheckerBoard will be Here!</h2>
+    <table>
+      {% for i in range(down) %}
+        <tr>
+          {% for j in range(across) %}
+            <td class="box{{ (i + j)%2 }}"></td>
+          {% endfor %}
+        </tr>
+      {% endfor %}  
+    </table>
+  </table>
+</body>
+</html>

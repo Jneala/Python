@@ -1,0 +1,14 @@
+*{
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+  box-sizing: border-box;
+  background-color: darkblue;
+}
+body{
+  background-color: darkblue;
+}
+
+.table{
+  width: 400px;
+}

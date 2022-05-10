@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+  <title>Counter</title>
+</head>
+<body>
+  <h1>Counter</h1>
+  <h3>Current site count: {{ count }}</h3>
+
+  <p>This is to count the number of times the index is hit, then be able to delete our session.</p>
+<form action="addtwo">
+    <input type="submit" value="addtwo"
+    id="addtwo"
+    name="addtwo"
+    class="button">
+</form>
+  <form action="/delete_session">
+    <input type="submit" id="delete_session" name="delete_session" value="Delete Session"
+    class="button">
+  </form>
+</body>
+</html>

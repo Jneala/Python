@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+  <title>Ninja Gold Fools!</title>
+</head>
+<body>
+  <div id="header">
+    <h2 class="header">The Start of Ninja Gold</h2>
+    {{you_won | safe}}
+    <form action="/reset">
+      {{reset | safe}}
+    </form>
+  </div>
+  <h3 id="your_gold">Your Gold: {{session['your_gold']}} &nbsp Count: {{session['count']}}</h3>
+  <div id="wrapper">
+    <div class="forms">
+      <h2 class="form_title">Farm</h2>
+      <h4 class="descriptions">(earn 5-10 gold, lose 0-2 gold)</h4>
+      <form action="/process" method="post">
+        <input type="hidden" name="building" value="farm">
+        <input type="submit" value="Find Gold!" class="buttons">
+      </form>
+    </div>
+    <div class="forms">
+      <h2 class="form_title">Cave</h2>
+      <h4 class="descriptions">(earn 10-30 gold, lose 0-15 gold)</h4>
+      <form action="/process" method="post">
+        <input type="hidden" name="building" value="cave">
+        <input type="submit" value="Find Gold!" class="buttons">
+      </form>
+    </div>
+    <div class="forms">
+      <h2 class="form_title">House</h2>
+      <h4 class="descriptions">(earn 10-15 gold, lose 0-5 gold)</h4>
+      <form action="/process" method="post">
+        <input type="hidden" name="building" value="house">
+        <input type="submit" value="Find Gold!" class="buttons">
+      </form>
+    </div>
+    <div class="forms">
+      <h2 class="form_title">Casino</h2>
+      <h4 class="descriptions">(earn 0-50 gold, lose 0-50 gold)</h4>
+      <form action="/process" method="post">
+        <input type="hidden" name="building" value="casino">
+        <input type="submit" value="Find Gold!" class="buttons">
+      </form>
+    </div>
+  </div>
+  <div id="activities">
+    <h4 id="actTitle">Activities:</h4>
+    <table class="scrollable">
+      <tbody>
+        {% for a in session['activities'] | reverse %}
+        <tr>
+        <td>{{a}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

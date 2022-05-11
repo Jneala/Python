@@ -1,0 +1,64 @@
+*{
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #89a6f6;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='126' height='84' viewBox='0 0 126 84'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%2349e174' fill-opacity='0.4'%3E%3Cpath d='M126 83v1H0v-2h40V42H0v-2h40V0h2v40h40V0h2v40h40V0h2v83zm-2-1V42H84v40h40zM82 42H42v40h40V42zm-50-6a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm96 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm-42 0a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm30-12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM20 54a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm12 24a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM8 54a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm24 0a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM8 78a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm12 0a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm54 0a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM50 54a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm24 0a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM50 78a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm54-12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm12 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM92 54a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm24 0a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM92 78a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm24-42a4 4 0 1 1 0-8 4 4 0 0 1 0 8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+#wrapper{
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+#header{
+  margin: 0 auto;
+  text-align: center;
+}
+#reset{
+  background-color: aqua;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+#your_gold{
+  margin: 15px auto;
+  border: darkgreen solid 2px;
+  width: 400px;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.forms{
+  border: solid darkgreen 2px;
+  border-radius: 15px;
+  text-align: center;
+  width: 20%;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+.buttons{
+  background-color: aqua;
+  padding: 5px;
+}
+
+#activities{
+  border: darkgreen solid 2px;
+  border-radius: 15px;
+  max-height: 300px;
+  min-height: 200px;
+  margin: 20px;
+  padding: 20px;
+}
+.scrollable{
+  table-layout: fixed;
+  border-collapse: collapse;
+  width: 100%;
+}
+.scrollable tbody{
+  display: block;
+  overflow: auto;
+  height: 200px;
+}
